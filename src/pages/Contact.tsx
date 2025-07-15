@@ -24,7 +24,7 @@ const ContactPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
      e.preventDefault();
 
-  const response = await fetch("/.netlify/functions/sendEmail", {
+  const response = await fetch("/.netlify/functions/email", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
