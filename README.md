@@ -4,7 +4,7 @@ This is my personal portfolio website, built to showcase my work, skills, and ba
 
 ## 🌍 Live Site
 
-[https://your-portfolio.netlify.app](https://portfolio386.netlify.app/)
+[https://portfolio386.netlify.app/](https://portfolio386.netlify.app/)
 
 ---
 
