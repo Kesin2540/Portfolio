@@ -46,8 +46,8 @@ const ProjectsPage = () => {
       description: "A modern, responsive portfolio website built with React and Tailwind CSS, featuring smooth animations and interactive elements.",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop",
       technologies: ["React", "Tailwind CSS"],
-      githubUrl: "https://github.com/keshav/portfolio",
-      liveUrl: "https://keshav-portfolio.vercel.app"
+      githubUrl: "https://github.com/Kesin2540/Portfolio",
+      liveUrl: null
     }
   ];
 
