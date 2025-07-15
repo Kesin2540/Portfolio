@@ -22,9 +22,9 @@ const ContactPage = () => {
     }));
   };
 
-  const SERVICE_ID = 'your_service_id';
-  const TEMPLATE_ID = 'your_template_id';
-  const PUBLIC_KEY = 'your_public_key';
+  const SERVICE_ID = 'service_2gmhn7c';
+  const TEMPLATE_ID = 'template_qnxtibw';
+  const PUBLIC_KEY = 'lHLxlrz2i2dzNb7es';
 
   const handleSubmit = async (e: React.FormEvent) => {
      e.preventDefault();
