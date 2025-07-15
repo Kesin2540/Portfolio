@@ -22,27 +22,21 @@ const ContactPage = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+     e.preventDefault();
 
-  try {
-    const response = await fetch("https://your-backend-url.onrender.com/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+  const response = await fetch("/.netlify/functions/sendEmail", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  });
 
-    if (response.ok) {
-      alert("✅ Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      const errorData = await response.json();
-      alert(`❌ Failed to send message: ${errorData.error || "Server error"}`);
-    }
-  } catch (error) {
-    console.error("Error submitting form:", error);
-    alert("❌ Something went wrong. Please try again later.");
+  if (response.ok) {
+    alert("Message sent!");
+    setFormData({ name: "", email: "", message: "" });
+  } else {
+    alert("Failed to send message.");
   }
   };
 

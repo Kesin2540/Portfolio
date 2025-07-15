@@ -7,9 +7,9 @@ const ProjectsPage = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   const technologies = [
-    "All", "React", "Node.js", "MongoDB", "Stripe", "Firebase", 
-    "Material-UI", "OpenWeatherMap API", "Chart.js", "Tailwind CSS", 
-    "Framer Motion", "Socket.io", "Express"
+    "All", "React","Python", "Sci-kit Learn", "Streamlit",
+    "Tailwind CSS", "Unity3D", "C#",
+    "C++", "OOP", "STL"
   ];
 
   const projects = [
@@ -45,7 +45,7 @@ const ProjectsPage = () => {
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website built with React and Tailwind CSS, featuring smooth animations and interactive elements.",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
+      technologies: ["React", "Tailwind CSS"],
       githubUrl: "https://github.com/keshav/portfolio",
       liveUrl: "https://keshav-portfolio.vercel.app"
     }
