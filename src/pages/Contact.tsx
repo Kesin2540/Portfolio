@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -21,22 +22,29 @@ const ContactPage = () => {
     }));
   };
 
+  const SERVICE_ID = 'your_service_id';
+  const TEMPLATE_ID = 'your_template_id';
+  const PUBLIC_KEY = 'your_public_key';
+
   const handleSubmit = async (e: React.FormEvent) => {
      e.preventDefault();
 
-  const response = await fetch("/netlify/functions/email", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  });
-
-  if (response.ok) {
-    alert("Message sent!");
-    setFormData({ name: "", email: "", message: "" });
-  } else {
-    alert("Failed to send message.");
+  try {
+    const result = await emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      PUBLIC_KEY
+    );
+    alert('Message sent!');
+    setFormData({ name: '', email: '', message: '' });
+  } catch (error) {
+    alert('Failed to send message.');
+    console.error('EmailJS error:', error);
   }
   };
 
