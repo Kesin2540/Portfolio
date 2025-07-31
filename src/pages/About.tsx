@@ -4,8 +4,7 @@ import { MapPin, Mail, Phone, User } from "lucide-react";
 const AboutPage = () => {
   const skills = [
     { name: "C++", level: 90 },
-    { name: "React", level: 60 },
-    { name: "Node.js", level: 50 },
+    { name: "React", level: 40 },
     { name: "Python", level: 85 },
     { name: "Linux", level: 70 },
     { name: "Unity3D", level: 65 },
